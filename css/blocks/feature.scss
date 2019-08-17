@@ -1,0 +1,40 @@
+/* Feature */
+.feature {
+    background: url('../img/background/feature.jpg') no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+  }
+
+.section__title {
+      margin-bottom: 60px;
+  }
+  
+  .feature__icon {
+    height: 85px;
+  }
+  
+  .feature__list {
+    display: flex;
+  }
+  
+  .feature__item {
+    margin-bottom: 50px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .feature__img {
+    margin-bottom: 15px;
+  }
+  
+  .feature__name {
+    font-size: 24px;
+    @include lifehack;
+    color: $dark-grey;
+    margin-bottom: 20px;
+  }

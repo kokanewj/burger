@@ -1,0 +1,27 @@
+/* Button */
+.btn {
+	@include inlineblock();
+	background: $orange;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: $white;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 3px 16px;
+	line-height: 30px;
+	@include ubuntu(500);
+	border: 1px solid transparent;
+	transition: background-color 0.5s;
+	cursor: pointer;
+	outline:none;
+	&:hover {
+		background-color: darken($red, 10%);
+	}
+	&:focus {
+		border: 1px solid $red;
+	}
+}
+.btn-order{
+	padding: 2px 12px;
+}

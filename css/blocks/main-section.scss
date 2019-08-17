@@ -1,0 +1,70 @@
+/* Main */
+
+.main {
+    background: url('../img/background/main.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .main__container{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8%;
+    margin-left: 20px;
+  }
+  .main-wrapper{
+      align-items: center;
+  }
+  
+  .main__left,
+  .main__right {
+    float: left;
+    width: 50%;
+  }
+  
+  .main__right {
+    padding-top: 70px;
+  }
+  .main__subtitle {
+    font-size: 65px;
+    color: white;
+    @include lifehack;
+    text-transform: lowercase;
+    line-height: 1;
+  }
+  
+  .main__img {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* Down arrow */
+  
+  .down-arrow {
+    width: 60px;
+    transition: .3s;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    &:hover {
+      .down-arrow__icon {
+        margin-top: -10px;
+        width: 29px;
+        height: 14px;
+      }
+    }
+  }
+  
+  .down-arrow__icon {
+    width: 29px;
+    height: 14px;
+    transition: .3s;
+    fill: #fff;
+  }

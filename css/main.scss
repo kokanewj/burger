@@ -1,0 +1,16 @@
+// Setup
+@import '_variant/variables';
+@import '_variant/_mixins';
+@import '_variant/fonts';
+@import '_variant/layout';
+
+// blocks
+@import "blocks/feature.scss";
+@import "blocks/btn.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/header.scss";
+@import "blocks/main-section.scss";
+@import "blocks/nav.scss";
+@import "blocks/reviews.scss";
+@import "blocks/section.scss";
+@import "blocks/text-block.scss";

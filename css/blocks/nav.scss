@@ -1,0 +1,44 @@
+/* Navigation */
+.nav {
+	@include inlineblock(middle);
+}
+
+.nav__list {
+	width: 100%;
+	@extend %clearfix;
+}
+
+.nav__item {
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+
+	&:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+	}
+
+	&:after {
+		content: "";
+		@include inlineblock(middle);
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: white;
+		margin: 0 14px;
+	}
+}
+
+.nav__link {
+	@include inlineblock(middle);
+	font-size: 13px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	@include ubuntu(500);
+	&:hover {
+		text-decoration: underline;
+	}
+}
