@@ -1,0 +1,70 @@
+/* Menu */
+
+.menu {
+	background: url('../img/background/burgers.png') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;  
+	top: 10%;
+	left: 10%;
+}
+
+.menu-accordeon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display:flex;
+
+}
+
+.menu-accordeon__item {
+	display: flex;
+	height: 100%;
+
+	&.active {
+		.menu-accordeon__category {
+			color: $yellow;
+		}
+	}
+}
+
+.menu-accordeon__trigger {
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	@include cover;
+	text-decoration: none;
+	position: relative;
+
+}
+
+.menu-accordeon__category {
+	font-size: 40px;
+	color: #fff;
+	@include gagalin;
+	text-align: center;
+	writing-mode: tb-rl;
+	transform: rotate(180deg);
+}
+
+.menu-accordeon__description {
+	height: 100%;
+	background: rgba(#2f3234, 0.93);
+	width: 0;
+	overflow: hidden;
+}
+
+.menu-accordeon__info {
+	@include ubuntu(light);
+	font-size: 14px;
+	color: #fff;
+	width: 100%;
+    line-height: 1.8;
+	padding: 60px 30px;
+}

@@ -1,0 +1,6 @@
+/* socials */
+
+.socials__item {
+	@include inlineblock(middle);
+	margin-left: 10px;
+}
