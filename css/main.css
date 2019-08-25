@@ -914,10 +914,38 @@ button {
   line-height: 1.8; }
 
 /* socials */
+.socials {
+  position: relative;
+  top: 50%; }
+
 .socials__item {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px; }
+  .socials__item:first-child {
+    margin-left: 0px; }
+
+.socials__link {
+  max-width: 23px;
+  max-height: 20px;
+  display: inline-block;
+  fill: #595959;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .socials__link:hover {
+    fill: #fff; }
+
+.socials__icon {
+  max-width: 23px;
+  max-height: 20px;
+  display: inline-block;
+  fill: #595959;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .socials__icon:hover {
+    fill: #fff; }
 
 /* Footer */
 .footer {
