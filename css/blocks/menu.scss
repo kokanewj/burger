@@ -33,7 +33,7 @@
 }
 
 .menu-accordeon__trigger {
-	width: 80px;
+	width: rem(80px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 .menu-accordeon__category {
-	font-size: 40px;
+	font-size: rem(40px);
 	color: #fff;
 	@include gagalin;
 	text-align: center;
@@ -62,9 +62,9 @@
 
 .menu-accordeon__info {
 	@include ubuntu(light);
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #fff;
 	width: 100%;
     line-height: 1.8;
-	padding: 60px 30px;
+	padding: rem(60px) rem(30px);
 }
