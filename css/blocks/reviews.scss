@@ -59,11 +59,8 @@
   overflow: hidden;
 
   @include tablets {
-    padding-top:3%;
-  }
-
-  @include tablets {
     // padding:0;
+    padding: 3% 3%;
     display:flex;
     align-items: center;
     justify-content: center;

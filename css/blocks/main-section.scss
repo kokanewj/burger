@@ -10,7 +10,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding-bottom: 15%;
+  // padding-bottom: 15%;
   margin-left: rem(20px);
 }
 
@@ -34,8 +34,6 @@
 
 .main__left,
 .main__right {
-  // display: flex;
-  // flex-direction: column;
   width: 50%;
 
  @include tablets {
@@ -58,6 +56,10 @@
   @include lifehack;
   text-transform: lowercase;
   line-height: 1;
+
+  @include tablets {
+    font-size: rem(54px);
+  }
 
   @include phones {
     font-size: rem(42px);
