@@ -43,6 +43,10 @@ font-size: 16px;
     min-height: 650px;
     transition: transform 0.7s;
     will-change: transform;
+
+    @include phones_small {
+     min-height: initial;
+    }
   }
   .container {
     min-width: 300px;

@@ -41,6 +41,10 @@
 	text-decoration: none;
 	position: relative;
 
+	@include phones_small {
+		width: rem(60px);
+	}
+
 }
 
 .menu-accordeon__category {
@@ -57,6 +61,13 @@
 	background: rgba(#2f3234, 0.93);
 	width: 0;
 	overflow: hidden;
+
+	@include phones_small {
+		font-weight: lighter;
+		font-size: rem(12px);
+		overflow-y: scroll;
+		visibility: visiible;
+	}
 }
 
 .menu-accordeon__info {
@@ -66,4 +77,10 @@
 	width: 100%;
     line-height: 1.8;
 	padding: rem(60px) rem(30px);
+
+	@include phones_small {
+		font-weight: lighter;
+		font-size: rem(12px);
+		padding: rem(60px) rem(30px);
+	}
 }

@@ -14,7 +14,15 @@
 
 .feature__icon {
   height: rem(85px);
+
+  @include phones_small {
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+    }
 }
+
+
 
 .feature__list {
   display: flex;
@@ -33,12 +41,21 @@
   @include phones {
     flex-direction: row;
   }
+
+  @include phones_small {
+	margin-bottom: rem(14px); //1.125 rem
+	}
 }
 
 .feature__img {
   @include phones {
     width:35%;
   }
+
+  @include phones_small {
+    width:25%;
+    margin-right: rem(25px);
+	}
 }
 
 .feature__description {
@@ -46,6 +63,10 @@
     text-align: left;
     width:65%;
   }
+
+  @include phones_small {
+    width:75%;
+	}
 }
 
 .feature__name {
@@ -53,5 +74,9 @@
   @include lifehack;
   color: $dark-grey;
   margin-bottom: rem(20px);
+
+  @include phones_small {
+		margin-bottom: 12px; //0.25rem
+	}
 }
 
