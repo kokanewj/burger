@@ -10,7 +10,6 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  // padding-bottom: 15%;
   margin-left: rem(20px);
 }
 
@@ -120,7 +119,7 @@
     width: rem(24px);
     height: rem(5px);
     border-radius: rem(3px);
-    z-index: 100;
+    z-index: 10;
     cursor: pointer;
     transition: transform .25s ease;
   }
@@ -145,3 +144,4 @@
     transform: translateY(rem(-7px)) translateX(0) rotate(-45deg);
     border-radius: 5px; }
 }
+
