@@ -111,6 +111,7 @@
 
   @include tablets {
     display:flex;
+    z-index:12;
   }
 }
 .hamburger-menu-link__bars {
@@ -119,7 +120,7 @@
     width: rem(24px);
     height: rem(5px);
     border-radius: rem(3px);
-    // z-index: 10;
+    z-index: 100;
     cursor: pointer;
     transition: transform .25s ease;
   }
@@ -135,7 +136,7 @@
     bottom: 0;
   }
 }
-.hamburger-menu-link.is-active .hamburger-menu-link__bars{
+.hamburger-menu-link.hamburger-menu-link_active .hamburger-menu-link__bars{
   background: transparent;
   &:before {
     transform: translateY(rem(10px)) translateX(0) rotate(45deg);
@@ -162,10 +163,10 @@
   width: 100%;
   height: 0%;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   &--open {
     opacity: .99;
-    visibility: visible;
+    display:block;
     height: 100%; }
     &--open &-menu__item {
       -webkit-animation: fadeInDown .5s ease forwards;

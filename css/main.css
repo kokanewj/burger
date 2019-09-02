@@ -23,30 +23,6 @@
   font-weight: normal;
   font-style: normal; }
 
-@font-face {
-  font-family: ubuntu;
-  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: ubuntu;
-  src: url("../fonts/ubuntu-light-webfont.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: ubuntu;
-  src: url("../fonts/ubuntu-medium-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: ubuntu;
-  src: url("../fonts/ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 /* Main settings */
 * {
   -webkit-box-sizing: border-box;
@@ -580,7 +556,8 @@ button {
   max-width: 5.875rem; }
   @media screen and (max-width: 768px) {
     .logo__img {
-      z-index: 20; } }
+      opacity: 0;
+      z-index: 100; } }
 
 /* Main */
 .main {
@@ -708,13 +685,15 @@ button {
     .hamburger-menu-link {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      z-index: 12; } }
 
 .hamburger-menu-link__bars, .hamburger-menu-link__bars:before, .hamburger-menu-link__bars:after {
   background: #fff;
   width: 1.5rem;
   height: 0.3125rem;
   border-radius: 0.1875rem;
+  z-index: 100;
   cursor: pointer;
   -webkit-transition: -webkit-transform .25s ease;
   transition: -webkit-transform .25s ease;
@@ -733,14 +712,14 @@ button {
 .hamburger-menu-link__bars:after {
   bottom: 0; }
 
-.hamburger-menu-link.is-active .hamburger-menu-link__bars {
+.hamburger-menu-link.hamburger-menu-link_active .hamburger-menu-link__bars {
   background: transparent; }
-  .hamburger-menu-link.is-active .hamburger-menu-link__bars:before {
+  .hamburger-menu-link.hamburger-menu-link_active .hamburger-menu-link__bars:before {
     -webkit-transform: translateY(0.625rem) translateX(0) rotate(45deg);
     -ms-transform: translateY(0.625rem) translateX(0) rotate(45deg);
     transform: translateY(0.625rem) translateX(0) rotate(45deg);
     border-radius: 5px; }
-  .hamburger-menu-link.is-active .hamburger-menu-link__bars:after {
+  .hamburger-menu-link.hamburger-menu-link_active .hamburger-menu-link__bars:after {
     -webkit-transform: translateY(-0.4375rem) translateX(0) rotate(-45deg);
     -ms-transform: translateY(-0.4375rem) translateX(0) rotate(-45deg);
     transform: translateY(-0.4375rem) translateX(0) rotate(-45deg);
@@ -761,10 +740,10 @@ button {
   width: 100%;
   height: 0%;
   opacity: 0;
-  visibility: hidden; }
+  display: none; }
   .full_screen--open {
     opacity: .99;
-    visibility: visible;
+    display: block;
     height: 100%; }
   .full_screen--open .full_screen-menu__item {
     -webkit-animation: fadeInDown .5s ease forwards;
@@ -949,6 +928,7 @@ button {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  z-index: 10;
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .review__textblock {
@@ -1593,8 +1573,7 @@ button {
       opacity: 1; }
       @media screen and (max-width: 480px) {
         .composition:hover.composition_active .composition__menu {
-          left: 5.625rem;
-          right: 0; } }
+          left: 5.625rem; } }
 
 .composition__icon {
   height: 70%; }

@@ -24,7 +24,7 @@
           opacity: 1;
           @include phones {
             left: rem(90px);
-            right: 0;
+            // right: 0;
           }
         }
       }
