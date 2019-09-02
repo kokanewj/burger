@@ -117,6 +117,20 @@
     opacity: 1;
   
     @include tablets {
+      top: rem(30px);
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+
+    @include phones {
+      top: rem(-45px);
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+
+    @include phones-small {
       top: 0;
       right: 0;
       bottom: auto;

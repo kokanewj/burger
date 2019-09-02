@@ -13,6 +13,9 @@
     @include phones {
       margin-top: rem(-70px);
     }
+    @include phones-small {
+      top: rem(65px);
+    }
     &:hover {
       &.composition_active {
         background: $red;

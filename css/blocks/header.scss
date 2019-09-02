@@ -22,3 +22,17 @@
     }
 
 }
+
+.logo {
+    display: inline-block;
+    position: relative;
+    padding-top: rem(12px);
+  }
+  
+  .logo__img {  
+    max-width: rem(94px);
+    @include tablets {
+        z-index: 20;
+       }
+  }
+
