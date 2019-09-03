@@ -15,7 +15,17 @@ let FullScreenMenu = (function(options) {
   let addListeners = function() {
     buttonOpen.addEventListener('click', _toggleFullScreenMenu);
     buttonClose.addEventListener('click', _toggleFullScreenMenu);
-  }
+
+    FullScreenMenu.addEventListener("click", function(e) {
+      target = e.target;
+      console.dir(target);
+      if (target.classList.contains('full_screen-menu__link')) {
+        _toggleFullScreenMenu();
+      }
+    })
+  
+  };
+
 
   return {
     open: addListeners

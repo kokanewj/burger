@@ -173,7 +173,8 @@
       -webkit-animation: fadeInDown .7s ease forwards;
       animation: fadeInDown .7s ease forwards;
       -webkit-animation-delay: .1s;
-      animation-delay: .1s; }
+      animation-delay: .1s; 
+    }
       &-menu { //расположение меню на full screen
         position: absolute;
         left: 50%;
@@ -215,7 +216,8 @@
       }
     //убираем у последнего элемента bullet
       &-menu__item:last-child:after {
-        display: none; 
+        // display: none; 
+        background-color: transparent;
       }
 
     //Стили для ссылок на секции
