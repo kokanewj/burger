@@ -240,12 +240,25 @@ button {
   margin-bottom: 0.9375rem; }
   .team-accordeon__item:last-child {
     margin-bottom: 0; }
-  .team-accordeon__item.active .team-accordeon__trigger {
+  .team-accordeon__item_active .team-accordeon__trigger {
     color: #f9b43b; }
-    .team-accordeon__item.active .team-accordeon__trigger:before {
+    .team-accordeon__item_active .team-accordeon__trigger:before {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); }
+  .team-accordeon__item_active .team-accordeon__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media screen and (max-width: 768px) {
+      .team-accordeon__item_active .team-accordeon__info {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
 
 .team-accordeon__trigger {
   color: #fff;
@@ -302,15 +315,6 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media screen and (max-width: 768px) {
-    .team-accordeon__info {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; } }
 
 .team-accordeon__photo {
   display: -webkit-box;
@@ -370,8 +374,20 @@ button {
   display: -ms-flexbox;
   display: flex;
   height: 100%; }
-  .menu-accordeon__item.active .menu-accordeon__category {
+  .menu-accordeon__item_active .menu-accordeon__category {
     color: #f9b43b; }
+  .menu-accordeon__item_active .menu-accordeon__description {
+    width: 720px; }
+    @media screen and (max-width: 768px) {
+      .menu-accordeon__item_active .menu-accordeon__description {
+        width: 350px; } }
+    @media screen and (max-width: 320px) {
+      .menu-accordeon__item_active .menu-accordeon__description {
+        width: 130px;
+        font-weight: lighter;
+        font-size: 0.75rem;
+        overflow-y: scroll;
+        visibility: visible; } }
 
 .menu-accordeon__trigger {
   width: 5rem;
@@ -414,12 +430,6 @@ button {
   background: rgba(47, 50, 52, 0.93);
   width: 0;
   overflow: hidden; }
-  @media screen and (max-width: 320px) {
-    .menu-accordeon__description {
-      font-weight: lighter;
-      font-size: 0.75rem;
-      overflow-y: scroll;
-      visibility: visiible; } }
 
 .menu-accordeon__info {
   font-family: ubuntu, Verdana, Arial, sans-serif;

@@ -44,12 +44,21 @@
 		margin-bottom: 0;
 	}
 
-	&.active {
+	&_active {
 		.team-accordeon__trigger {
 			color: $yellow; 
 
 			&:before {
 				transform: rotate(180deg);
+			}
+		}
+		
+		.team-accordeon__info {
+			display:flex;
+
+			@include tablets {
+				flex-direction: column;
+				align-items: center;
 			}
 		}
 	}
@@ -111,13 +120,6 @@
 	padding-top: rem(15px);
 	display: none;
 	justify-content: center;
-
-	
-	@include tablets {
-		flex-direction: column;
-		align-items: center;
-	}
-
 }
 
 .team-accordeon__photo {
