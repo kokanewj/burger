@@ -7,7 +7,7 @@ let FullScreenMenu = (function(options) {
   let body = document.querySelector('body');
   let effect = document.querySelector(options.effect);
 
-  let _toggleFullScreenMenu = function(e) {
+  let _toggleFullScreenMenu = function() {
     FullScreenMenu.classList.toggle('full_screen--open');
     body.classList.toggle('body_pop-up-menu');
     effect.classList.toggle('hamburger-menu-link_active');
@@ -111,7 +111,7 @@ let teamAccordeon = document.querySelector('.team-accordeon');
 const slide = (function(){
   const left = document.querySelector('.slider__button_prev');
   const right = document.querySelector('.slider__button_next');
-  const slider = document.querySelector('.slider__item');
+  const slider = document.querySelector('.slider_main');
   const computed = getComputedStyle(slider);
 
   let sliderWidth = parseInt(computed.width);
@@ -159,17 +159,16 @@ send.addEventListener('click', event => {
   event.preventDefault();
 
   if (validateForm(myForm)) {
-    let data = new FormData(myForm);
+    let data = new FormData();
     data.append("name", myForm.elements.name.value);
     data.append("phone", myForm.elements.phone.value);
     data.append("comment", myForm.elements.comment.value);
     data.append("to", "kokanewj@gmail.com");
-    
-    
-
+  
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.send(data);
     xhr.addEventListener('load', () => {
       if (xhr.response.status == 1) {
@@ -201,6 +200,7 @@ function validateField(field) {
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 }
+
 
 //Modal window (по вебинару)
 

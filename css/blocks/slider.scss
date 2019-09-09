@@ -51,19 +51,19 @@
       height: 100%;
     }
 
+  &_main {
+    display:flex;
+  }
+
     &__item {
       padding-bottom: rem(90px);
       // display: none;
 
-      &_active {
-      display:flex;
- 
       @include tablets {
         padding: 0;
         padding-top: rem(70px);
         flex-direction: column;
       }
-    }
     }
     
     &__img {
