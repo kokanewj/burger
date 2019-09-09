@@ -2,16 +2,16 @@
 .btn {
 	@include inlineblock();
 	background: $orange;
-	font-size: 13px;
+	font-size: rem(13px);
 	text-transform: uppercase;
 	color: $white;
 	text-align: center;
 	text-decoration: none;
 	border-radius: 5px;
-	padding: 3px 16px;
-	line-height: 30px;
+	padding: rem(3px) rem(16px);
+	line-height: rem(30px);
 	@include ubuntu(500);
-	border: 1px solid transparent;
+	border: rem(1px) solid transparent;
 	transition: background-color 0.5s;
 	cursor: pointer;
 	outline:none;
@@ -19,9 +19,9 @@
 		background-color: darken($red, 10%);
 	}
 	&:focus {
-		border: 1px solid $red;
+		border: rem(1px) solid $red;
 	}
 }
 .btn-order{
-	padding: 2px 12px;
+	padding: rem(2px) rem(12px);
 }

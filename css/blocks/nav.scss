@@ -23,17 +23,17 @@
 	&:after {
 		content: "";
 		@include inlineblock(middle);
-		width: 4px;
-		height: 4px;
+		width: rem(4px);
+		height: rem(4px);
 		border-radius: 50%;
 		background: white;
-		margin: 0 14px;
+		margin: 0 rem(14px);
 	}
 }
 
 .nav__link {
 	@include inlineblock(middle);
-	font-size: 13px;
+	font-size: rem(13px);
 	text-transform: uppercase;
 	color: white;
 	text-decoration: none;

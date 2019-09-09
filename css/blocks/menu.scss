@@ -1,0 +1,86 @@
+/* Menu */
+
+.menu {
+	background: url('../img/background/burgers.png') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;  
+	top: 10%;
+	left: 10%;
+}
+
+.menu-accordeon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display:flex;
+}
+
+.menu-accordeon__item {
+	display: flex;
+	height: 100%;
+
+	&.active {
+		.menu-accordeon__category {
+			color: $yellow;
+		}
+	}
+}
+
+.menu-accordeon__trigger {
+	width: rem(80px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	@include cover;
+	text-decoration: none;
+	position: relative;
+
+	@include phones_small {
+		width: rem(60px);
+	}
+
+}
+
+.menu-accordeon__category {
+	font-size: rem(40px);
+	color: #fff;
+	@include gagalin;
+	text-align: center;
+	writing-mode: tb-rl;
+	transform: rotate(180deg);
+}
+
+.menu-accordeon__description {
+	height: 100%;
+	background: rgba(#2f3234, 0.93);
+	width: 0;
+	overflow: hidden;
+
+	@include phones_small {
+		font-weight: lighter;
+		font-size: rem(12px);
+		overflow-y: scroll;
+		visibility: visiible;
+	}
+}
+
+.menu-accordeon__info {
+	@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	width: 100%;
+    line-height: 1.8;
+	padding: rem(60px) rem(30px);
+
+	@include phones_small {
+		font-weight: lighter;
+		font-size: rem(12px);
+		padding: rem(60px) rem(30px);
+	}
+}

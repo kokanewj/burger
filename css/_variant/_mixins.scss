@@ -7,6 +7,29 @@
     }
   }
 
+  @function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@mixin tablets () {
+    @media screen and (max-width: 768px) {
+     @content;   
+    }
+}
+
+@mixin phones () {
+    @media screen and (max-width: 480px) {
+     @content;   
+    }
+}
+
+@mixin phones_small () {
+  @media screen and (max-width: 320px) {
+   @content;   
+  }
+}
+
+
 /* Cover, centered, background and inlineblock */
   @mixin cover(){
     background-size: cover;
