@@ -1427,8 +1427,7 @@ button {
   height: 100%; }
 
 .slider__item {
-  padding-bottom: 5.625rem;
-  display: none; }
+  padding-bottom: 5.625rem; }
   .slider__item_active {
     display: -webkit-box;
     display: -ms-flexbox;

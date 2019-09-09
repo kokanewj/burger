@@ -159,19 +159,21 @@ send.addEventListener('click', event => {
   event.preventDefault();
 
   if (validateForm(myForm)) {
-    const data = {
-      name: myForm.elements.name.value,
-      phone: myForm.elements.phone.value,
-      comment: myForm.elements.comment.value
-    };
+    let data = new FormData(myForm);
+    data.append("name", myForm.elements.name.value);
+    data.append("phone", myForm.elements.phone.value);
+    data.append("comment", myForm.elements.comment.value);
+    data.append("to", "kokanewj@gmail.com");
+    
+    
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(JSON.stringify(data));
+    xhr.send(data);
     xhr.addEventListener('load', () => {
-      if (xhr.response.status) {
-        console.log('Все ОК!');
+      if (xhr.response.status == 1) {
+        console.log(xhr.response);
       }
     });
   }
