@@ -30,14 +30,14 @@
 		}
 		
 		.menu-accordeon__description {
-			width: 720px;
+			width: rem(720px);
 
 		@include tablets {
-			width: 350px;
+			width: rem(350px);
 		}
 
 		@include phones_small {
-			width: 130px;
+			width: rem(130px);
 			font-weight: lighter;
 			font-size: rem(12px);
 			overflow-y: scroll;
@@ -58,7 +58,7 @@
 	position: relative;
 
 	@include phones_small {
-		width: rem(60px);
+		// width: rem(60px);
 	}
 
 }

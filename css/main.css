@@ -377,13 +377,13 @@ button {
   .menu-accordeon__item_active .menu-accordeon__category {
     color: #f9b43b; }
   .menu-accordeon__item_active .menu-accordeon__description {
-    width: 720px; }
+    width: 45rem; }
     @media screen and (max-width: 768px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 350px; } }
+        width: 21.875rem; } }
     @media screen and (max-width: 320px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 130px;
+        width: 8.125rem;
         font-weight: lighter;
         font-size: 0.75rem;
         overflow-y: scroll;
@@ -406,9 +406,6 @@ button {
   background-repeat: no-repeat;
   text-decoration: none;
   position: relative; }
-  @media screen and (max-width: 320px) {
-    .menu-accordeon__trigger {
-      width: 3.75rem; } }
 
 .menu-accordeon__category {
   font-size: 2.5rem;
@@ -863,6 +860,43 @@ button {
     font-size: 14px;
     line-height: 1.5; }
   .popup-menu__close {
+    cursor: pointer;
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    width: 0.9375rem;
+    height: 0.9375rem; }
+
+.server-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(47, 50, 52, 0.9);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .server-menu__description {
+    position: relative;
+    width: 28.125rem;
+    max-height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.25rem; }
+  .server-menu__title {
+    color: #2f3234;
+    font-family: Gagalin;
+    font-size: 14px;
+    margin-bottom: 1.25rem; }
+  .server-menu__text {
+    font-size: 14px;
+    line-height: 1.5; }
+  .server-menu__close {
     cursor: pointer;
     position: absolute;
     top: 0.625rem;

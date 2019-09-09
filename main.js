@@ -154,6 +154,14 @@ slide.init();
 
 const myForm = document.querySelector('#myForm');
 const send =  document.querySelector('#send');
+const serverMenu = document.querySelector('.server-menu');
+const serverText = document.querySelector('.server-menu__text');
+const serverMenuClose = document.querySelector('.server-menu__close');
+serverMenuClose.addEventListener('click', function(e) {
+  e.preventDefault();
+  serverMenu.style.display = 'none';
+  document.body.style.overflow = 'initial';
+});
 
 send.addEventListener('click', event => {
   event.preventDefault();
@@ -171,9 +179,9 @@ send.addEventListener('click', event => {
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.send(data);
     xhr.addEventListener('load', () => {
-      if (xhr.response.status == 1) {
-        console.log(xhr.response);
-      }
+      serverMenu.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      serverText.innerText = xhr.response.message;
     });
   }
 });
