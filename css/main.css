@@ -1394,6 +1394,9 @@ button {
 .section__title {
   margin: 1.25rem 0; }
 
+.slider__wrap {
+  overflow: hidden; }
+
 .slider-block {
   position: relative; }
 
@@ -1429,10 +1432,20 @@ button {
 .slider_main {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
 
 .slider__item {
-  padding-bottom: 5.625rem; }
+  padding-bottom: 5.625rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media screen and (max-width: 768px) {
     .slider__item {
       padding: 0;

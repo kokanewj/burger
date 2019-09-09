@@ -16,6 +16,10 @@
   }
   .slider{
 
+    &__wrap {
+      overflow: hidden;
+    }
+
     &-block {
       position: relative;
     }
@@ -53,10 +57,15 @@
 
   &_main {
     display:flex;
+    position: relative;
+    transition: .3s;
   }
 
     &__item {
       padding-bottom: rem(90px);
+      flex-shrink:0;
+      width:100%;
+      display:flex;
       // display: none;
 
       @include tablets {
