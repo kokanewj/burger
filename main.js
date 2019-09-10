@@ -130,14 +130,16 @@ const slide = (function(){
       e.preventDefault();
       let currentRight = parseInt(computed.right);
 
-      if (currentRight < (sliderItemsCounter-1)*sliderWidth && direction==right) {
+      if (currentRight < (sliderItemsCounter-1)*sliderWidth && direction==right && flag) {
         flag = false;
         slider.style.right = currentRight + sliderWidth + "px";
         setTimeout(() => {flag = true}, 300)
       }
 
-      if (currentRight > 0 && direction==left) {
+      if (currentRight > 0 && direction==left && flag) {
+        flag = false;
         slider.style.right = currentRight - sliderWidth + "px";
+        setTimeout(() => {flag = true}, 300)
       }
     });
   }
