@@ -1370,6 +1370,13 @@ button {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.error {
+  font-family: ubuntu, Verdana, Arial, sans-serif;
+  font-weight: middle;
+  font-style: normal;
+  color: #e27575;
+  font-size: 0.875rem; }
+
 /* Text block*/
 .text-block p {
   font-size: 0.875rem;

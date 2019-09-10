@@ -123,6 +123,7 @@ const slide = (function(){
   }, true);
 
   var sliderItemsCounter = slider.children.length;
+  let flag = true;
 
   let moveSlide = function(direction) {
     direction.addEventListener("click", function(e) {
@@ -130,7 +131,9 @@ const slide = (function(){
       let currentRight = parseInt(computed.right);
 
       if (currentRight < (sliderItemsCounter-1)*sliderWidth && direction==right) {
+        flag = false;
         slider.style.right = currentRight + sliderWidth + "px";
+        setTimeout(() => {flag = true}, 300)
       }
 
       if (currentRight > 0 && direction==left) {
