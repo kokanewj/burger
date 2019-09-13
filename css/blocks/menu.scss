@@ -24,10 +24,26 @@
 	display: flex;
 	height: 100%;
 
-	&.active {
+	&_active {
 		.menu-accordeon__category {
 			color: $yellow;
 		}
+		
+		.menu-accordeon__description {
+			width: rem(720px);
+
+		@include tablets {
+			width: rem(350px);
+		}
+
+		@include phones_small {
+			width: rem(130px);
+			font-weight: lighter;
+			font-size: rem(12px);
+			overflow-y: scroll;
+			visibility: visible;
+		}
+	}
 	}
 }
 
@@ -42,7 +58,7 @@
 	position: relative;
 
 	@include phones_small {
-		width: rem(60px);
+		// width: rem(60px);
 	}
 
 }
@@ -61,13 +77,6 @@
 	background: rgba(#2f3234, 0.93);
 	width: 0;
 	overflow: hidden;
-
-	@include phones_small {
-		font-weight: lighter;
-		font-size: rem(12px);
-		overflow-y: scroll;
-		visibility: visiible;
-	}
 }
 
 .menu-accordeon__info {

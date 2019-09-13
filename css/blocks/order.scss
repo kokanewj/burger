@@ -234,3 +234,9 @@ border-width: 0 rem(3px) rem(3px) 0;
 -ms-transform: rotate(45deg);
 transform: rotate(45deg);
 }
+
+.error {
+  @include ubuntu(middle);
+  color: rgb(226, 117, 117);
+  font-size: rem(14px);
+}
