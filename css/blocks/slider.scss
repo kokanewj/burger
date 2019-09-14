@@ -135,11 +135,11 @@
       top: rem(30px);
       right: 0;
       bottom: auto;
-      left: auto;
+      // left: auto;
     }
 
     @include phones {
-      top: rem(-45px);
+      top: rem(3px);
       right: 0;
       bottom: auto;
       left: auto;
@@ -215,3 +215,12 @@
         padding: 0 5%;
       }
     }
+
+
+//     .slider__item {
+//       display: none;
+//           }
+
+//     .slider__item_active {
+// display: flex;
+//     }

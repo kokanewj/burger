@@ -52,22 +52,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2f3234;
-  position: relative; }
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none; }
 
 .wrapper {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 #content {
   height: 100%;
   min-height: 650px;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  -o-transition: transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
-  will-change: transform; }
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
   @media screen and (max-width: 320px) {
     #content {
       min-height: initial; } }
@@ -380,10 +382,11 @@ button {
     width: 45rem; }
     @media screen and (max-width: 768px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 21.875rem; } }
+        overflow-y: scroll;
+        width: 100%; } }
     @media screen and (max-width: 320px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 8.125rem;
+        width: 100%;
         font-weight: lighter;
         font-size: 0.75rem;
         overflow-y: scroll;
@@ -406,6 +409,9 @@ button {
   background-repeat: no-repeat;
   text-decoration: none;
   position: relative; }
+  @media screen and (max-width: 320px) {
+    .menu-accordeon__trigger {
+      width: 3.75rem; } }
 
 .menu-accordeon__category {
   font-size: 2.5rem;
@@ -1557,11 +1563,10 @@ button {
     .burger__calories {
       top: 1.875rem;
       right: 0;
-      bottom: auto;
-      left: auto; } }
+      bottom: auto; } }
   @media screen and (max-width: 480px) {
     .burger__calories {
-      top: -2.8125rem;
+      top: 0.1875rem;
       right: 0;
       bottom: auto;
       left: auto; } }
@@ -1641,7 +1646,6 @@ button {
 
 .composition {
   position: absolute;
-  top: 1.375rem;
   width: 5.625rem;
   height: 5.625rem;
   border-radius: 0.3125rem;
@@ -1668,14 +1672,14 @@ button {
       margin-top: -4.375rem; } }
   @media screen and (max-width: 320px) {
     .composition {
-      top: 4.0625rem; } }
-  .composition:hover.composition_active {
+      top: 4.6875rem; } }
+  .composition.composition_active {
     background: #e35028; }
-    .composition:hover.composition_active .composition__menu {
+    .composition.composition_active .composition__menu {
       left: 100%;
       opacity: 1; }
       @media screen and (max-width: 480px) {
-        .composition:hover.composition_active .composition__menu {
+        .composition.composition_active .composition__menu {
           left: 5.625rem; } }
 
 .composition__icon {
@@ -1808,11 +1812,9 @@ button {
 .footer__socials {
   text-align: right; }
 
-.map__img {
+.map {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  background: url("../img/photo/Map.png") top no-repeat;
-  background-size: cover; }
+  right: 0; }
