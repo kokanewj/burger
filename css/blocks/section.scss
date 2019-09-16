@@ -17,6 +17,7 @@
 	margin-bottom: rem(12px);
 	&.section__title_black {
 		color: $dark-grey;
+		text-align: center;
 	}
 
 	@include tablets {
