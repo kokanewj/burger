@@ -1,0 +1,129 @@
+/* Clearfix */
+%clearfix {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  @function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@mixin tablets () {
+    @media screen and (max-width: 768px) {
+     @content;   
+    }
+}
+
+@mixin phones () {
+    @media screen and (max-width: 480px) {
+     @content;   
+    }
+}
+
+@mixin phones_small () {
+  @media screen and (max-width: 320px) {
+   @content;   
+  }
+}
+
+
+/* Cover, centered, background and inlineblock */
+  @mixin cover(){
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  @mixin centered($axis: 'both') {
+    position: absolute;
+  
+    @if ($axis == 'both') {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @if $axis == 'x' {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @if $axis == 'y' {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @if $axis == 'max' {
+      bottom:0;
+      left:0;
+      right:0;
+      top:0;
+    }
+    @if $axis == 'fullX' {
+      left:0;
+      right:0;
+    }
+    @if $axis == 'fullY' {
+      top:0;
+      bottom:0;
+    }
+  }
+
+  @mixin background() {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @mixin inlineblock ($valine: top) {
+    display: inline-block;
+    vertical-align: $valine;
+  }
+
+/* Ubuntu, gagalin and lifehack */
+
+  @mixin ubuntu($weight) {
+    font-family: ubuntu, Verdana, Arial, sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+  }
+
+  @mixin gagalin {
+    font-family: gagalin, cursive;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  @mixin lifehack {
+    font-family: lifehack, cursive;
+    font-weight: 500;
+    font-style: normal;
+  }  
+
+/* Section, button */
+  
+  %section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  %btn {
+    display: inline-block;
+    font-family: ubuntu, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    padding: 3px 16px;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: darken($red, 10%);
+    }
+  }

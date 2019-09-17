@@ -64,6 +64,7 @@ body {
 
 #content {
   height: 100%;
+  min-height: 650px;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   -o-transition: transform 1s;
@@ -1114,7 +1115,6 @@ button {
 /* Section*/
 .section {
   height: 100%;
-  min-height: 40.625rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

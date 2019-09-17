@@ -1,0 +1,38 @@
+/* Header variables */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+    margin-left: rem(9px);
+}
+
+.header__menu {
+    flex: 1;
+    text-align: right;
+    margin-right: rem(6px);
+
+    @include tablets {
+        display:none;
+    }
+
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    padding-top: rem(12px);
+    z-index: 10;
+  }
+  
+  .logo__img {  
+    max-width: rem(94px);
+    @include tablets {
+    }
+  }
+
