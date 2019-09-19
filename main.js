@@ -483,7 +483,7 @@ let smallPauseButton = document.querySelector(".small_pause");
 let durationScale = document.getElementById("durationScale");  
 let sound = document.getElementById("sound");
 let soundControl = document.getElementById("soundScale"); 
-let interval = setInterval(updateDurationScale, 1000);
+let interval;
 
     sound.addEventListener('click', function (){      // onclick на кнопку sound
        document.querySelector(".short").classList.toggle("short_active"); // отображает или скрывает шкалу громкости  
@@ -495,7 +495,7 @@ let interval = setInterval(updateDurationScale, 1000);
         smallPauseButton.style.display = 'block'; //отображаем кнопку pause
         if (video.paused){  //свойство, аудио / видео приостановлено или нет (true или false)
             video.play(); // событие запускает видео
-            interval();
+            interval = setInterval(updateDurationScale, 1000);
         }
         else 
         {
@@ -509,7 +509,7 @@ let interval = setInterval(updateDurationScale, 1000);
       smallPauseButton.style.display = 'block';
       if (video.paused){
           video.play();
-          interval();     
+          interval = setInterval(updateDurationScale, 1000);    
       }
       else
       {
