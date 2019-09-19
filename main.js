@@ -552,7 +552,7 @@ let interval;
       interval = setInterval(updateDurationScale,1000);
       if (video.paused){
           video.play();
-          document.getElementsByClassName("big_play")[0].classList.remove("big_play_active");
+          document.getElementsByClassName("big_play")[0].classList.add("big_play_active");
       }
     }); 
 
