@@ -483,6 +483,7 @@ let smallPauseButton = document.querySelector(".small_pause");
 let durationScale = document.getElementById("durationScale");  
 let sound = document.getElementById("sound");
 let soundControl = document.getElementById("soundScale"); 
+let interval = setInterval(updateDurationScale, 1000);
 
     sound.addEventListener('click', function (){      // onclick на кнопку sound
        document.querySelector(".short").classList.toggle("short_active"); // отображает или скрывает шкалу громкости  
@@ -544,7 +545,6 @@ let soundControl = document.getElementById("soundScale");
     }
 
 
-    let interval = setInterval(updateDurationScale, 1000);
 
      //Перемотка видео
      durationScale.addEventListener('mouseup', function (){ // Кнопка мыши отпущена над элементом
