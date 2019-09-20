@@ -6,7 +6,10 @@
 }
 
 .video_container {
-    margin-bottom: 50px;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .player {
