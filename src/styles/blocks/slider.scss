@@ -1,0 +1,226 @@
+.burgers {
+  background: rgba(255,175,75,1);
+  background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(250,154,37,1) 16%, rgba(250,154,37,1) 75%, rgba(235,154,61,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(16%, rgba(250,154,37,1)), color-stop(75%, rgba(250,154,37,1)), color-stop(100%, rgba(235,154,61,1)));
+  background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(250,154,37,1) 16%, rgba(250,154,37,1) 75%, rgba(235,154,61,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(250,154,37,1) 16%, rgba(250,154,37,1) 75%, rgba(235,154,61,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(250,154,37,1) 16%, rgba(250,154,37,1) 75%, rgba(235,154,61,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(250,154,37,1) 16%, rgba(250,154,37,1) 75%, rgba(235,154,61,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#eb9a3d', GradientType=0 );
+  align-items: center;
+  justify-content: center;  
+  }
+
+  .section__title {
+    margin: rem(20px) 0;
+  }
+  .slider{
+
+    &__wrap {
+      overflow: hidden;
+    }
+
+    &-block {
+      position: relative;
+    }
+
+    &__button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &__button_next {
+      right: rem(-50px);
+      @include tablets {
+        right: rem(-5px);
+      }
+      @include phones {
+        right: rem(-5px);
+      }
+    }
+  
+    &__button_prev {
+      left: rem(-50px);
+      @include tablets {
+        left: rem(-5px);
+      }
+      @include phones {
+        left: rem(-5px);
+      }
+    }
+
+    &__arrow {
+      width: 100%;
+      height: 100%;
+    }
+
+  &_main {
+    display:flex;
+    position: relative;
+    transition: .3s;
+    right:0;
+  }
+
+    &__item {
+      padding-bottom: rem(90px);
+      flex-shrink:0;
+      width:100%;
+      display:flex;
+      // display: none;
+
+      @include tablets {
+        padding: 0;
+        padding-top: rem(70px);
+        flex-direction: column;
+      }
+    }
+    
+    &__img {
+      max-width: 95%;
+      @include tablets {
+        max-width: 65%;
+      }
+    }
+  
+    &__description {
+      color: $white;
+      margin-bottom: rem(32px);
+    }
+  
+    &__order {
+      display: flex;
+      align-items: flex-end;
+  
+      @include tablets() {
+        justify-content: center;
+      }
+    }
+  
+    &__price {
+      @include gagalin;
+      display: flex;
+      align-items: flex-end;
+      color: $red;
+    }
+  
+    &__price-amount,
+    &__price-measure {
+      line-height: 0.7;
+    }
+  
+    &__price-amount {
+      font-size: rem(75px);
+      @include tablets {
+        font-size: rem(52px);
+      }
+    }
+  
+    &__price-measure {
+      font-size: rem(35px);
+    }
+  }
+  
+  .btn_order {
+    margin-left: rem(35px);
+  }
+  
+  .burger__calories {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: 1;
+  
+    @include tablets {
+      top: rem(30px);
+      right: 0;
+      bottom: auto;
+      // left: auto;
+    }
+
+    @include phones {
+      top: rem(3px);
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+
+    @include phones-small {
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+  
+    &_measure {
+      position: relative;
+      width: rem(60px);
+      height: rem(60px);
+      @include tablets {
+        width: rem(70px);
+        height: rem(65px);
+      }
+    }
+  
+    &_amount {
+      position: absolute;
+      bottom: rem(8px);
+      left: 52%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: $white;
+      font-size: rem(20px);
+      @include gagalin;
+    }
+  
+    &_name {
+      position: relative;
+      text-align: center;
+      @include gagalin;
+      font-size: rem(14px);
+      color: $white;
+      @include tablets {
+        font-size: rem(13px);
+      }
+    }
+  }
+
+
+  .slider__left, .slider__right {
+      flex: 1;
+      @include tablets {
+        text-align: center;
+      }
+      @include tablets {
+        .section__title {
+          font-size: rem(45px);
+        }
+      }
+    }
+  
+.slider__left {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+.slider__right {
+      .section__title {
+        line-height: 1em;
+      }
+      @include tablets {
+        padding: 0 15%;
+      }
+      @include phones {
+        padding: 0 5%;
+      }
+    }
+
+
+//     .slider__item {
+//       display: none;
+//           }
+
+//     .slider__item_active {
+// display: flex;
+//     }

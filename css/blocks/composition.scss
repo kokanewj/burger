@@ -1,6 +1,6 @@
 .composition {
     position: absolute;
-    top: rem(22px);
+    // top: rem(25px);
     width: rem(90px);
     height: rem(90px);
     border-radius: rem(5px);
@@ -15,21 +15,33 @@
       margin-top: rem(-70px);
     }
     @include phones-small {
-      top: rem(65px);
+      top: rem(75px);
     }
-    &:hover {
-      &.composition_active {
-        background: $red;
-        .composition__menu {
-          left: 100%;
-          opacity: 1;
-          @include phones {
-            left: rem(90px);
-            // right: 0;
-          }
-        }
-      }
-      }
+    // &:hover {
+    //   &.composition_active {
+    //     background: $red;
+    //     .composition__menu {
+    //       left: 100%;
+    //       opacity: 1;
+    //       @include phones {
+    //         left: rem(90px);
+    //         // right: 0;
+    //       }
+    //     }
+    //   }
+    //   }
+
+    &.composition_active {
+      background: $red;
+      .composition__menu {
+              left: 100%;
+              opacity: 1;
+              @include phones {
+                left: rem(90px);
+                // right: 0;
+              }
+            }
+    }
   }
   
   .composition__icon {

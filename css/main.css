@@ -52,22 +52,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2f3234;
-  position: relative; }
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none; }
 
 .wrapper {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 #content {
   height: 100%;
   min-height: 650px;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  -o-transition: transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
-  will-change: transform; }
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
   @media screen and (max-width: 320px) {
     #content {
       min-height: initial; } }
@@ -83,7 +85,10 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 /* Reset tag styles */
 h1,
@@ -380,10 +385,11 @@ button {
     width: 45rem; }
     @media screen and (max-width: 768px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 21.875rem; } }
+        overflow-y: scroll;
+        width: 100%; } }
     @media screen and (max-width: 320px) {
       .menu-accordeon__item_active .menu-accordeon__description {
-        width: 8.125rem;
+        width: 100%;
         font-weight: lighter;
         font-size: 0.75rem;
         overflow-y: scroll;
@@ -406,6 +412,9 @@ button {
   background-repeat: no-repeat;
   text-decoration: none;
   position: relative; }
+  @media screen and (max-width: 320px) {
+    .menu-accordeon__trigger {
+      width: 3.75rem; } }
 
 .menu-accordeon__category {
   font-size: 2.5rem;
@@ -1125,7 +1134,8 @@ button {
   text-transform: uppercase;
   margin-bottom: 0.75rem; }
   .section__title.section__title_black {
-    color: #2f3234; }
+    color: #2f3234;
+    text-align: center; }
   @media screen and (max-width: 768px) {
     .section__title {
       font-size: 3.375rem; } }
@@ -1377,6 +1387,125 @@ button {
   color: #e27575;
   font-size: 0.875rem; }
 
+.video {
+  background: url("../img/background/video_background.png") center center/cover no-repeat;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.video_container {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.player {
+  position: relative;
+  width: 100%; }
+
+#player {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.big_play {
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  cursor: pointer; }
+  .big_play_active {
+    display: none; }
+  @media screen and (max-width: 480px) {
+    .big_play {
+      width: 50px; } }
+
+.video__controls {
+  height: 2.1875rem;
+  background-color: #2f3234;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.small_play {
+  padding: 0 0.9375rem;
+  cursor: pointer; }
+
+.small_pause {
+  display: none;
+  padding: 0 0.625rem;
+  cursor: pointer; }
+
+.duration__length {
+  width: 100%;
+  height: 0.3125rem;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; }
+
+.duration__length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #757171;
+  cursor: pointer;
+  width: 0.625rem;
+  height: 0.625rem; }
+
+.sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.625rem; }
+
+.sound__img {
+  cursor: pointer; }
+
+.sound__volume {
+  margin-left: 0.3125rem; }
+
+.short {
+  width: 3.625rem;
+  height: 0.25rem;
+  position: absolute;
+  -webkit-transform: translateX(-50%) rotate(-90deg);
+  -ms-transform: translateX(-50%) rotate(-90deg);
+  transform: translateX(-50%) rotate(-90deg);
+  top: -100%;
+  left: 50%;
+  display: none; }
+  .short_active {
+    display: block; }
+
 /* Text block*/
 .text-block p {
   font-size: 0.875rem;
@@ -1446,7 +1575,8 @@ button {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  z-index: 100; }
 
 .slider__button_next {
   right: -3.125rem; }
@@ -1557,11 +1687,10 @@ button {
     .burger__calories {
       top: 1.875rem;
       right: 0;
-      bottom: auto;
-      left: auto; } }
+      bottom: auto; } }
   @media screen and (max-width: 480px) {
     .burger__calories {
-      top: -2.8125rem;
+      top: 0.1875rem;
       right: 0;
       bottom: auto;
       left: auto; } }
@@ -1641,7 +1770,6 @@ button {
 
 .composition {
   position: absolute;
-  top: 1.375rem;
   width: 5.625rem;
   height: 5.625rem;
   border-radius: 0.3125rem;
@@ -1668,14 +1796,14 @@ button {
       margin-top: -4.375rem; } }
   @media screen and (max-width: 320px) {
     .composition {
-      top: 4.0625rem; } }
-  .composition:hover.composition_active {
+      top: 4.6875rem; } }
+  .composition.composition_active {
     background: #e35028; }
-    .composition:hover.composition_active .composition__menu {
+    .composition.composition_active .composition__menu {
       left: 100%;
       opacity: 1; }
       @media screen and (max-width: 480px) {
-        .composition:hover.composition_active .composition__menu {
+        .composition.composition_active .composition__menu {
           left: 5.625rem; } }
 
 .composition__icon {
@@ -1808,11 +1936,9 @@ button {
 .footer__socials {
   text-align: right; }
 
-.map__img {
+.map {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  background: url("../img/photo/Map.png") top no-repeat;
-  background-size: cover; }
+  right: 0; }

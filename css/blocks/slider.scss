@@ -28,6 +28,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 100;
     }
   
     &__button_next {
@@ -135,11 +136,11 @@
       top: rem(30px);
       right: 0;
       bottom: auto;
-      left: auto;
+      // left: auto;
     }
 
     @include phones {
-      top: rem(-45px);
+      top: rem(3px);
       right: 0;
       bottom: auto;
       left: auto;
@@ -215,3 +216,12 @@
         padding: 0 5%;
       }
     }
+
+
+//     .slider__item {
+//       display: none;
+//           }
+
+//     .slider__item_active {
+// display: flex;
+//     }
